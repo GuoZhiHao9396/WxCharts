@@ -8,8 +8,8 @@
 	},
 	"compileType": "weapp",
 	"libVersion": "1.5.4",
-	"appid": "touristappid",
-	"projectname": "a",
+	"appid": "wx52816275cbf232c0",
+	"projectname": "wx",
 	"condition": {
 		"weapp": {
 			"current": -1,
