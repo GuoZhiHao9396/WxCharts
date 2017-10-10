@@ -1,0 +1,29 @@
+
+<!--index.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">营收</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">单品排行</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">重复购买</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">客单价</view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <swiper-item>
+    <text>按年成交总额</text>
+    <canvas canvas-id="columnCanvas" class="canvas"></canvas>  
+    <text>按月订单总额</text>
+    <canvas canvas-id="columnCanvas1" class="canvas"></canvas>
+  </swiper-item>
+
+  <swiper-item>
+    <canvas canvas-id="pieCanvas" class="canvas"></canvas>
+  </swiper-item>
+
+  <swiper-item>
+    <canvas canvas-id="ringCanvas" class="canvas"></canvas>
+  </swiper-item>
+
+  <swiper-item>
+    <canvas canvas-id="lineCanvas" class="canvas"></canvas>
+  </swiper-item>
+
+</swiper>
